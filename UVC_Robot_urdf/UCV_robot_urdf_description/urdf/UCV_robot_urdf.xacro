@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<robot name="UCV_robot_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find UCV_robot_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find UCV_robot_urdf_description)/urdf/UCV_robot_urdf.trans" />
+<xacro:include filename="$(find UCV_robot_urdf_description)/urdf/UCV_robot_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0005684663800967518 1.6861442325029684e-06 0.00477855003731065" rpy="0 0 0"/>
+    <mass value="5.453505423835813"/>
+    <inertia ixx="0.066842" iyy="0.046567" izz="0.113336" ixy="-0.0" iyz="-0.0" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1_1">
+  <inertial>
+    <origin xyz="0.00775150326042473 0.005214358475538666 -0.01425000000000554" rpy="0 0 0"/>
+    <mass value="0.3417439075057314"/>
+    <inertia ixx="5.5e-05" iyy="8.4e-05" izz="9.5e-05" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092 0.186 -0.0004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Servo_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092 0.186 -0.0004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Servo_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1__1__1">
+  <inertial>
+    <origin xyz="0.00775150326042473 -0.005214358475538083 -0.01425000000003445" rpy="0 0 0"/>
+    <mass value="0.3417439075057314"/>
+    <inertia ixx="5.5e-05" iyy="8.4e-05" izz="9.5e-05" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092 -0.186 -0.0004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Servo_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092 -0.186 -0.0004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Servo_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_v2_1">
+  <inertial>
+    <origin xyz="-8.619866748993399e-07 0.007884164770174618 -1.4325996771230587e-06" rpy="0 0 0"/>
+    <mass value="0.029886631406815363"/>
+    <inertia ixx="1.1e-05" iyy="2.1e-05" izz="1.1e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.096 -0.199 0.01385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Wheel_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.096 -0.199 0.01385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Wheel_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_v2__1__1">
+  <inertial>
+    <origin xyz="-9.5793546260603e-07 -0.007884164770174007 1.3636102257838512e-06" rpy="0 0 0"/>
+    <mass value="0.029886631406815363"/>
+    <inertia ixx="1.1e-05" iyy="2.1e-05" izz="1.1e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.096 0.199 0.01385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Wheel_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.096 0.199 0.01385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Wheel_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Layer_v2_1">
+  <inertial>
+    <origin xyz="-0.06343153450777987 1.6861442365080336e-06 0.018978550037310648" rpy="0 0 0"/>
+    <mass value="5.453505423835813"/>
+    <inertia ixx="0.066842" iyy="0.046567" izz="0.113336" ixy="-0.0" iyz="-0.0" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.064 -0.0 -0.0178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Layer_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.064 -0.0 -0.0178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/Layer_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="batteries_v2_1">
+  <inertial>
+    <origin xyz="0.15099999911209713 -5.683892408333141e-15 0.04703104967731735" rpy="0 0 0"/>
+    <mass value="9.23198"/>
+    <inertia ixx="0.08807" iyy="0.077039" izz="0.151495" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.157 0.0 -0.0414" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/batteries_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.157 0.0 -0.0414" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://UCV_robot_urdf_description/meshes/batteries_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.092 -0.186 0.0004" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1_1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="-0.092 0.186 0.0004" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1__1__1"/>
+</joint>
+
+<joint name="Revolute 3" type="continuous">
+  <origin xyz="-0.004 0.013 -0.01425" rpy="0 0 0"/>
+  <parent link="Servo_v1__1__1"/>
+  <child link="Wheel_v2_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 4" type="continuous">
+  <origin xyz="-0.004 -0.013 -0.01425" rpy="0 0 0"/>
+  <parent link="Servo_v1_1"/>
+  <child link="Wheel_v2__1__1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="0.064 0.0 0.0178" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Layer_v2_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.221 -0.0 0.0236" rpy="0 0 0"/>
+  <parent link="Layer_v2_1"/>
+  <child link="batteries_v2_1"/>
+</joint>
+
+</robot>
